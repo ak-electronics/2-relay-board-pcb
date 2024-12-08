@@ -2005,7 +2005,10 @@
 				)
 			)
 		)
-		(symbol "Regulator_Linear:AMS1117-5.0"
+		(symbol "Regulator_Linear:LM2936-5.0_TO92"
+			(pin_names
+				(offset 0.254)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -2017,7 +2020,7 @@
 					)
 				)
 			)
-			(property "Value" "AMS1117-5.0"
+			(property "Value" "LM2936-5.0_TO92"
 				(at 0 3.175 0)
 				(effects
 					(font
@@ -2026,8 +2029,18 @@
 					(justify left)
 				)
 			)
-			(property "Footprint" "Package_TO_SOT_SMD:SOT-223-3_TabPin2"
-				(at 0 5.08 0)
+			(property "Footprint" "Package_TO_SOT_THT:TO-92_Inline"
+				(at 0 5.715 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+						(italic yes)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "http://www.ti.com/lit/ds/symlink/lm2936.pdf"
+				(at 0 -1.27 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -2035,16 +2048,7 @@
 					(hide yes)
 				)
 			)
-			(property "Datasheet" "http://www.advanced-monolithic.com/pdf/ds1117.pdf"
-				(at 2.54 -6.35 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "1A Low Dropout regulator, positive, 5.0V fixed output, SOT-223"
+			(property "Description" "50mA Ultra-Low Quiescent Current LDO Voltage Regulator, 5.0V fixed output, TO-92"
 				(at 0 0 0)
 				(effects
 					(font
@@ -2062,7 +2066,7 @@
 					(hide yes)
 				)
 			)
-			(property "ki_fp_filters" "SOT?223*TabPin2*"
+			(property "ki_fp_filters" "TO?92*"
 				(at 0 0 0)
 				(effects
 					(font
@@ -2071,7 +2075,7 @@
 					(hide yes)
 				)
 			)
-			(symbol "AMS1117-5.0_0_1"
+			(symbol "LM2936-5.0_TO92_0_1"
 				(rectangle
 					(start -5.08 -5.08)
 					(end 5.08 1.905)
@@ -2084,11 +2088,11 @@
 					)
 				)
 			)
-			(symbol "AMS1117-5.0_1_1"
-				(pin power_in line
-					(at 0 -7.62 90)
+			(symbol "LM2936-5.0_TO92_1_1"
+				(pin power_out line
+					(at 7.62 0 180)
 					(length 2.54)
-					(name "GND"
+					(name "VO"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -2103,10 +2107,10 @@
 						)
 					)
 				)
-				(pin power_out line
-					(at 7.62 0 180)
+				(pin power_in line
+					(at 0 -7.62 90)
 					(length 2.54)
-					(name "VO"
+					(name "GND"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -3873,12 +3877,6 @@
 		(uuid "0d23d335-8875-4544-81a0-57982d179a18")
 	)
 	(junction
-		(at 60.96 35.56)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "1834fb3f-8aea-4639-9083-5d4aec375ee1")
-	)
-	(junction
 		(at 196.215 50.8)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -3889,12 +3887,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "263d57ba-55e9-432a-bbf2-e38551d2b2d0")
-	)
-	(junction
-		(at 72.39 35.56)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "288e2037-d57f-4799-bb60-ae050923224e")
 	)
 	(junction
 		(at 185.42 86.36)
@@ -3987,10 +3979,10 @@
 		(uuid "a216f895-0817-4f7d-b46c-3f7969f84483")
 	)
 	(junction
-		(at 60.96 45.72)
+		(at 66.04 45.72)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "acdab4cd-d150-4c46-be1a-a996bfbffef6")
+		(uuid "a398f13d-d750-42a6-b763-8f3139c2f758")
 	)
 	(junction
 		(at 85.09 45.72)
@@ -4021,12 +4013,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "bba2bbb8-6048-40c1-becc-3945252e7764")
-	)
-	(junction
-		(at 72.39 45.72)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "c5d00c1a-cd83-4fb3-9402-acbfd84b1a7b")
 	)
 	(junction
 		(at 129.54 35.56)
@@ -4154,7 +4140,7 @@
 	)
 	(wire
 		(pts
-			(xy 35.56 45.72) (xy 60.96 45.72)
+			(xy 35.56 45.72) (xy 66.04 45.72)
 		)
 		(stroke
 			(width 0)
@@ -4292,16 +4278,6 @@
 		)
 		(uuid "2736889a-5cf2-4cfd-adf6-aa65715ca237")
 	)
-	(wire
-		(pts
-			(xy 60.96 35.56) (xy 60.96 36.83)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "27e0992a-a601-4ccf-a3b0-0940d981ec65")
-	)
 	(polyline
 		(pts
 			(xy 20.32 76.2) (xy 108.585 76.2)
@@ -4311,16 +4287,6 @@
 			(type default)
 		)
 		(uuid "2cc0c802-07ab-4732-874d-77927924fa65")
-	)
-	(wire
-		(pts
-			(xy 60.96 35.56) (xy 66.04 35.56)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "2e26b51a-5a0e-4db7-9b06-97c264130aef")
 	)
 	(wire
 		(pts
@@ -4424,16 +4390,6 @@
 	)
 	(wire
 		(pts
-			(xy 72.39 44.45) (xy 72.39 45.72)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "40cc8387-13c7-4694-9212-0d9dda68ea08")
-	)
-	(wire
-		(pts
 			(xy 48.26 106.68) (xy 45.72 106.68)
 		)
 		(stroke
@@ -4472,16 +4428,6 @@
 		)
 		(uuid "45fa8705-1b4f-4789-b879-6061368f3d9f")
 	)
-	(wire
-		(pts
-			(xy 60.96 45.72) (xy 72.39 45.72)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "490cf765-a8f1-43e8-9aac-477e2b47eb83")
-	)
 	(polyline
 		(pts
 			(xy 19.05 149.225) (xy 19.05 191.77)
@@ -4501,16 +4447,6 @@
 			(type default)
 		)
 		(uuid "49fdd6fc-7b7a-4579-8bf1-1249a72c8368")
-	)
-	(wire
-		(pts
-			(xy 60.96 44.45) (xy 60.96 45.72)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "4bbffea8-9eff-40ce-a5e7-3b3f2492937b")
 	)
 	(wire
 		(pts
@@ -4571,6 +4507,16 @@
 			(type default)
 		)
 		(uuid "57c6dddc-ff17-4805-9b2c-2491e293ac0a")
+	)
+	(wire
+		(pts
+			(xy 66.04 45.72) (xy 85.09 45.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5c6d101f-3ff0-4ba8-b5da-7538924269ec")
 	)
 	(wire
 		(pts
@@ -4834,7 +4780,7 @@
 	)
 	(wire
 		(pts
-			(xy 54.61 35.56) (xy 60.96 35.56)
+			(xy 54.61 35.56) (xy 66.04 35.56)
 		)
 		(stroke
 			(width 0)
@@ -4934,6 +4880,16 @@
 	)
 	(wire
 		(pts
+			(xy 66.04 36.83) (xy 66.04 35.56)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a6a1160d-17b3-44eb-96c1-7428072a2d49")
+	)
+	(wire
+		(pts
 			(xy 240.03 63.5) (xy 250.19 63.5)
 		)
 		(stroke
@@ -5004,16 +4960,6 @@
 	)
 	(wire
 		(pts
-			(xy 72.39 45.72) (xy 85.09 45.72)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "b01466dc-d95b-43f4-973f-4fc4aee779f4")
-	)
-	(wire
-		(pts
 			(xy 185.42 106.68) (xy 185.42 111.76)
 		)
 		(stroke
@@ -5074,13 +5020,13 @@
 	)
 	(wire
 		(pts
-			(xy 72.39 35.56) (xy 72.39 36.83)
+			(xy 66.04 45.72) (xy 66.04 44.45)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "b4398c3f-a578-447f-885a-226f771c5455")
+		(uuid "b6ffba1c-9915-4f6a-82fc-b5f2a2ed75ec")
 	)
 	(wire
 		(pts
@@ -5201,16 +5147,6 @@
 			(type default)
 		)
 		(uuid "d19b8f89-80a7-4bf5-ae68-8fa1a289df99")
-	)
-	(wire
-		(pts
-			(xy 72.39 35.56) (xy 77.47 35.56)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d2482529-8750-4ccd-ac77-753f4164120b")
 	)
 	(wire
 		(pts
@@ -5394,7 +5330,7 @@
 	)
 	(wire
 		(pts
-			(xy 66.04 35.56) (xy 72.39 35.56)
+			(xy 66.04 35.56) (xy 77.47 35.56)
 		)
 		(stroke
 			(width 0)
@@ -6957,7 +6893,7 @@
 	)
 	(symbol
 		(lib_id "SERVO CONTROL CARD-rescue:CP-Device")
-		(at 60.96 40.64 0)
+		(at 66.04 40.64 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -6965,7 +6901,7 @@
 		(dnp no)
 		(uuid "00000000-0000-0000-0000-00005f93b713")
 		(property "Reference" "C4"
-			(at 63.9572 39.4716 0)
+			(at 69.0372 39.4716 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6974,7 +6910,7 @@
 			)
 		)
 		(property "Value" "1000uf/50v"
-			(at 47.498 43.688 0)
+			(at 66.802 43.688 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6983,7 +6919,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_THT:CP_Radial_D12.5mm_P5.00mm"
-			(at 61.9252 44.45 0)
+			(at 67.0052 44.45 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6992,7 +6928,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 60.96 40.64 0)
+			(at 66.04 40.64 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7001,7 +6937,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 60.96 40.64 0)
+			(at 66.04 40.64 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7245,8 +7181,8 @@
 				(justify right)
 			)
 		)
-		(property "Value" "0.1uf/50v"
-			(at 107.188 43.688 0)
+		(property "Value" "C"
+			(at 109.601 41.783 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7375,7 +7311,7 @@
 		(dnp no)
 		(uuid "00000000-0000-0000-0000-00005fc0dfdc")
 		(property "Reference" "C8"
-			(at 254 61.214 0)
+			(at 247.269 59.5884 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7383,8 +7319,8 @@
 				(justify right)
 			)
 		)
-		(property "Value" "10uf/50v"
-			(at 246.126 53.594 90)
+		(property "Value" "C"
+			(at 247.269 57.277 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7696,7 +7632,7 @@
 		(dnp no)
 		(uuid "00000000-0000-0000-0000-00005fdb6a49")
 		(property "Reference" "C1"
-			(at 199.39 60.96 0)
+			(at 193.294 59.5884 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7704,8 +7640,8 @@
 				(justify right)
 			)
 		)
-		(property "Value" "10uf/50v"
-			(at 192.024 53.594 90)
+		(property "Value" "C"
+			(at 193.294 57.277 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8241,7 +8177,7 @@
 		(dnp no)
 		(uuid "00000000-0000-0000-0000-00005ff2efc0")
 		(property "Reference" "D7"
-			(at 45.974 28.702 0)
+			(at 46.99 43.815 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8250,7 +8186,7 @@
 			)
 		)
 		(property "Value" "D_Bridge_+-AA"
-			(at 45.974 31.496 0)
+			(at 46.99 41.91 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8453,7 +8389,7 @@
 		(dnp no)
 		(uuid "00000000-0000-0000-0000-00005ff6f90a")
 		(property "Reference" "C2"
-			(at 211.074 58.674 0)
+			(at 202.819 58.9534 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8461,8 +8397,8 @@
 				(justify right)
 			)
 		)
-		(property "Value" "10uf/50v"
-			(at 217.678 56.642 0)
+		(property "Value" "C"
+			(at 202.819 56.642 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8591,7 +8527,7 @@
 		(dnp no)
 		(uuid "00000000-0000-0000-0000-00005ff8e1d0")
 		(property "Reference" "C6"
-			(at 265.176 59.69 0)
+			(at 256.794 58.9534 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8599,8 +8535,8 @@
 				(justify right)
 			)
 		)
-		(property "Value" "10uf/50v"
-			(at 271.78 57.15 0)
+		(property "Value" "C"
+			(at 256.794 56.642 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8817,8 +8753,8 @@
 				(justify right)
 			)
 		)
-		(property "Value" "0.1uf/50v"
-			(at 167.64 93.472 0)
+		(property "Value" "C"
+			(at 165.989 95.377 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9068,75 +9004,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:C")
-		(at 72.39 40.64 180)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "207f2a70-b5fa-4b9e-ac88-0e03a610f8ff")
-		(property "Reference" "C3"
-			(at 75.311 39.4716 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "0.1uf/50v"
-			(at 73.914 43.942 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "My Custom Footprint:C_1206_3216Metric"
-			(at 71.4248 36.83 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 72.39 40.64 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 72.39 40.64 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "225af8d1-9adb-45d4-825a-a101db2bae01")
-		)
-		(pin "1"
-			(uuid "b6aa9f8a-abf9-40e6-b492-2679d4143ec6")
-		)
-		(instances
-			(project "SERVO CONTROL CARD"
-				(path "/fa8dddb1-7db3-4709-a558-b00583395be4"
-					(reference "C3")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Transistor_BJT:BD139")
 		(at 182.88 116.84 0)
 		(unit 1)
@@ -9230,7 +9097,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "10uf/50v"
+		(property "Value" "C"
 			(at 132.461 41.783 0)
 			(effects
 				(font
@@ -9505,8 +9372,8 @@
 				(justify right)
 			)
 		)
-		(property "Value" "0.1uf/50v"
-			(at 231.394 92.456 0)
+		(property "Value" "C"
+			(at 229.489 94.107 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10040,6 +9907,78 @@
 		)
 	)
 	(symbol
+		(lib_id "Regulator_Linear:LM2936-5.0_TO92")
+		(at 118.11 35.56 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "b8fff20b-67de-45d5-afb8-31abf18f05f6")
+		(property "Reference" "U2"
+			(at 118.11 29.21 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "LM2936-5.0_TO92"
+			(at 118.11 31.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "My Custom Footprint:TO-92_Inline_Wide_LM78L05"
+			(at 118.11 29.845 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "http://www.ti.com/lit/ds/symlink/lm2936.pdf"
+			(at 118.11 36.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "50mA Ultra-Low Quiescent Current LDO Voltage Regulator, 5.0V fixed output, TO-92"
+			(at 118.11 35.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "3"
+			(uuid "b3622108-307e-427b-b688-954e56b00c87")
+		)
+		(pin "1"
+			(uuid "e27b3ab8-aaa2-4fbc-8f41-fb23a2a052c0")
+		)
+		(pin "2"
+			(uuid "3c535b2e-8c72-4cea-af74-c9f1cf13adce")
+		)
+		(instances
+			(project ""
+				(path "/fa8dddb1-7db3-4709-a558-b00583395be4"
+					(reference "U2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "SERVO CONTROL CARD-rescue:CP-Device")
 		(at 96.52 40.64 0)
 		(unit 1)
@@ -10250,77 +10189,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Regulator_Linear:AMS1117-5.0")
-		(at 118.11 35.56 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "eec396fd-e436-44c5-b4f9-3501eef051a9")
-		(property "Reference" "U4"
-			(at 118.11 29.21 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "AMS1117-5.0"
-			(at 118.11 31.75 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Package_TO_SOT_SMD:SOT-223-3_TabPin2"
-			(at 118.11 30.48 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "http://www.advanced-monolithic.com/pdf/ds1117.pdf"
-			(at 120.65 41.91 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "1A Low Dropout regulator, positive, 5.0V fixed output, SOT-223"
-			(at 118.11 35.56 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "4508924e-111d-47fb-aa59-127de4879c99")
-		)
-		(pin "1"
-			(uuid "1beb2142-c030-46ab-9ecb-4e167da9ab6b")
-		)
-		(pin "3"
-			(uuid "4351f521-87a6-4bec-8309-cfb1758cdbd2")
-		)
-		(instances
-			(project ""
-				(path "/fa8dddb1-7db3-4709-a558-b00583395be4"
-					(reference "U4")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Regulator_Linear:LM7812_TO220")
 		(at 85.09 35.56 0)
 		(unit 1)
@@ -10338,7 +10206,7 @@
 				)
 			)
 		)
-		(property "Value" "LM7809_TO220"
+		(property "Value" "LM7812_TO220"
 			(at 85.09 31.75 0)
 			(effects
 				(font
